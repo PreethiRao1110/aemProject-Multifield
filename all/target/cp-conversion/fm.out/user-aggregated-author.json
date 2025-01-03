@@ -1,0 +1,142 @@
+{
+  "id":"com.mycompany.aem:aem-myproject.all:slingosgifeature:user-aggregated-author:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.mycompany.aem:aem-myproject.core:1.0.0-SNAPSHOT",
+      "feature-origins":"com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"aem-myproject.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.commons.log.LogManager.factory.config~myproject":    {
+      ":configurator:content-package-origins":"com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT|com.mycompany.aem:aem-myproject.ui.config:1.0.0-SNAPSHOT",
+      "org.apache.sling.commons.log.names":[
+        "com.mycompany.aem.myproject"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins-org.apache.sling.commons.log.names":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.file":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.level":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-org.apache.sling.commons.log.additiv":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "com.adobe.granite.cors.impl.CORSPolicyImpl~myproject":    {
+      ":configurator:content-package-origins":"com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT|com.mycompany.aem:aem-myproject.ui.config:1.0.0-SNAPSHOT",
+      "alloworigin":[
+        "http://localhost:3000"
+      ],
+      "allowedpaths":[
+        "/(content|conf)/myproject.*"
+      ],
+      "supportedheaders":[
+        "Authorization",
+        "Origin",
+        "Accept",
+        "X-Requested-With",
+        "Content-Type",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+      ],
+      "supportedmethods":[
+        "GET",
+        "HEAD"
+      ],
+      "alloworiginregexp":[
+      ],
+      ":configurator:feature-origins-supportedmethods":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-alloworigin":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-alloworiginregexp":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-supportedheaders":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-allowedpaths":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ]
+    },
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~myproject":    {
+      ":configurator:content-package-origins":"com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT|com.mycompany.aem:aem-myproject.ui.config:1.0.0-SNAPSHOT",
+      "mobile.resourceTypes":[
+        "myproject/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:feature-origins-mobile.resourceTypes":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins-README":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ],
+      ":configurator:feature-origins":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT",
+    "com.mycompany.aem:aem-myproject.all:slingosgifeature:author:1.0.0-SNAPSHOT"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    {
+      "id":"com.mycompany.aem:aem-myproject.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.mycompany.aem:aem-myproject.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+    },
+    {
+      "id":"com.mycompany.aem:aem-myproject.all:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+      "feature-origins":"com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+    }
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT|com.mycompany.aem:aem-myproject.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~myproject",
+    "create path (sling:OrderedFolder) /content/dam/myproject",
+    "create path (nt:unstructured) /content/dam/myproject/jcr:content",
+    "set properties on /content/dam/myproject/jcr:content",
+    "  set cq:conf{String} to /conf/myproject",
+    "  set jcr:title{String} to \"My Local AEM Project\"",
+    "end"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.mycompany.aem.myproject.core.filters",
+        "com.mycompany.aem.myproject.core.listeners",
+        "com.mycompany.aem.myproject.core.models",
+        "com.mycompany.aem.myproject.core.schedulers",
+        "com.mycompany.aem.myproject.core.servlets"
+      ],
+      "feature-origins":[
+        "com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    }
+  ],
+  "artifact-rules:JSON|false":{
+
+  }
+}

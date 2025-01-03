@@ -1,0 +1,7 @@
+com/mycompany/aem/myproject/core/filters/LoggingFilterTest.class
+com/mycompany/aem/myproject/core/servlets/SimpleServletTest.class
+com/mycompany/aem/myproject/core/testcontext/AppAemContext$1.class
+com/mycompany/aem/myproject/core/models/HelloWorldModelTest.class
+com/mycompany/aem/myproject/core/schedulers/SimpleScheduledTaskTest.class
+com/mycompany/aem/myproject/core/testcontext/AppAemContext.class
+com/mycompany/aem/myproject/core/listeners/SimpleResourceListenerTest.class

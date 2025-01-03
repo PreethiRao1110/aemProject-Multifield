@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Bundle-Category: My Local AEM Project
+Bundle-Description: Core bundle for My Local AEM Project
+Bundle-ManifestVersion: 2
+Bundle-Name: My Local AEM Project - Core
+Bundle-SymbolicName: aem-myproject.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: com.mycompany.aem.myproject.core.filters;version="1.0"
+ ;uses:="javax.servlet",com.mycompany.aem.myproject.core.listeners;ver
+ sion="1.0";uses:="org.apache.sling.api.resource.observation",com.myco
+ mpany.aem.myproject.core.models;version="1.0";uses:="javax.annotation
+ ,org.apache.sling.api.resource,org.apache.sling.models.annotations,or
+ g.apache.sling.models.annotations.injectorspecific",com.mycompany.aem
+ .myproject.core.schedulers;version="1.0",com.mycompany.aem.myproject.
+ core.servlets;version="1.0";uses:="javax.servlet,org.apache.sling.api
+ ,org.apache.sling.api.servlets"
+Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;ve
+ rsion="[1.31,2)",com.mycompany.aem.myproject.core.filters;version="[1
+ .0,2)",com.mycompany.aem.myproject.core.listeners;version="[1.0,2)",c
+ om.mycompany.aem.myproject.core.schedulers;version="[1.0,2)",com.myco
+ mpany.aem.myproject.core.servlets;version="[1.0,2)",javax.servlet;ver
+ sion="[3.1,4)",org.apache.sling.api;version="[2.3,3)",org.apache.slin
+ g.api.request;version="[2.7,3)",org.apache.sling.api.resource;version
+ ="[2.13,3)",org.apache.sling.api.resource.observation;version="[1.2,2
+ )",org.apache.sling.api.servlets;version="[2.4,3)",org.apache.sling.m
+ odels.annotations;version="[1.5,2)",org.apache.sling.models.annotatio
+ ns.injectorspecific;version="[1.1,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
+ unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
+ ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
+ ervlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:List<S
+ tring>="org.apache.sling.api.resource.observation.ResourceChangeListe
+ ner";uses:="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
+ nent)(version>=1.5.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
+ e=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.mycompany.aem.myproject.core.filters.L
+ oggingFilter.xml,OSGI-INF/com.mycompany.aem.myproject.core.listeners.
+ SimpleResourceListener.xml,OSGI-INF/com.mycompany.aem.myproject.core.
+ schedulers.SimpleScheduledTask.xml,OSGI-INF/com.mycompany.aem.myproje
+ ct.core.servlets.SimpleServlet.xml
+Sling-Model-Classes: com.mycompany.aem.myproject.core.models.HelloWorl
+ dModel
+

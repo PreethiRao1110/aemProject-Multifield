@@ -1,0 +1,4 @@
+com/mycompany/aem/myproject/it/tests/PublishPageValidationIT.class
+com/mycompany/aem/myproject/it/tests/GetPageIT.class
+com/mycompany/aem/myproject/it/tests/HtmlUnitClient.class
+com/mycompany/aem/myproject/it/tests/CreatePageIT.class

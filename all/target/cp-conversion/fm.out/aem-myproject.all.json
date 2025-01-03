@@ -1,0 +1,49 @@
+{
+  "id":"com.mycompany.aem:aem-myproject.all:slingosgifeature:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.mycompany.aem:aem-myproject.core:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"aem-myproject.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.commons.log.LogManager.factory.config~myproject":    {
+      "org.apache.sling.commons.log.names":[
+        "com.mycompany.aem.myproject"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:content-package-origins":"com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT|com.mycompany.aem:aem-myproject.ui.config:1.0.0-SNAPSHOT"
+    }
+  },
+  "content-packages:ARTIFACTS|true":[
+    "com.mycompany.aem:aem-myproject.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.mycompany.aem:aem-myproject.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.mycompany.aem:aem-myproject.all:zip:cp2fm-converted:1.0.0-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "# origin=com.mycompany.aem:aem-myproject.all:1.0.0-SNAPSHOT|com.mycompany.aem:aem-myproject.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~myproject",
+    "create path (sling:OrderedFolder) /content/dam/myproject",
+    "create path (nt:unstructured) /content/dam/myproject/jcr:content",
+    "set properties on /content/dam/myproject/jcr:content",
+    "  set cq:conf{String} to /conf/myproject",
+    "  set jcr:title{String} to \"My Local AEM Project\"",
+    "end"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.mycompany.aem.myproject.core.filters",
+        "com.mycompany.aem.myproject.core.listeners",
+        "com.mycompany.aem.myproject.core.models",
+        "com.mycompany.aem.myproject.core.schedulers",
+        "com.mycompany.aem.myproject.core.servlets"
+      ]
+    }
+  ]
+}

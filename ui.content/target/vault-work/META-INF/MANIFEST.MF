@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: My Local AEM Project - UI content
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: content
+Content-Package-Id: com.mycompany.aem:aem-myproject.ui.content:1.0.0-SNA
+ PSHOT
+Content-Package-Description: UI content package for My Local AEM Project
+Content-Package-Dependencies: com.mycompany.aem:aem-myproject.ui.apps:1.
+ 0.0-SNAPSHOT
+Content-Package-Dependencies-Locations: com.mycompany.aem:aem-myproject.
+ ui.apps:1.0.0-SNAPSHOT=maven:com.mycompany.aem:aem-myproject.ui.apps:1.
+ 0.0-SNAPSHOT:zip
+Content-Package-Roots: /conf/myproject,/content/dam/myproject/asset.jpg,
+ /content/experience-fragments/myproject,/content/myproject
+

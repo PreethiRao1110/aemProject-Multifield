@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: My Local AEM Project - UI apps
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.mycompany.aem:aem-myproject.ui.apps:1.0.0-SNAPSH
+ OT
+Content-Package-Description: UI apps package for My Local AEM Project
+Content-Package-Roots: /apps/myproject/clientlibs,/apps/myproject/compon
+ ents,/apps/myproject/i18n
+Import-Package: com.mycompany.aem.myproject.core.models;version="[1.0.0,
+ 2.0.0)",org.apache.sling.scripting.sightly;version="[2.0.0,3.0.0)"
+
